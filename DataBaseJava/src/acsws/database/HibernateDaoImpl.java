@@ -34,7 +34,7 @@ public class HibernateDaoImpl {
 		config.setProperty("c3p0.max_size", "10");
 		config.setProperty("c3p0.timeout", "10");
 		//mapping
-		config.addResource("sort/database/database.hbm.xml");
+		config.addResource("acsws/database/database.hbm.xml");
 		return config;
 	}
 	
