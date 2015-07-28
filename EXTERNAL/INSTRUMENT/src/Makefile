@@ -7,7 +7,7 @@
 #
 # who       when      what
 # --------  --------  ----------------------------------------------
-# javarias  03/09/13  created
+# instrument  17/07/12  created
 #
 
 #*******************************************************************************
@@ -40,9 +40,6 @@ EXECUTABLES_L   =
 
 #
 # <brief description of xxxxx program>
-xxxxx_OBJECTS   =	
-xxxxx_LDFLAGS   =
-xxxxx_LIBS      =
 
 #
 # special compilation flags for single c sources
@@ -51,17 +48,19 @@ xxxxx_LIBS      =
 #
 # Includes (.h) files (public only)
 # ---------------------------------
-INCLUDES        = 
+INCLUDES        =
 
 #
 # Libraries (public and local)
 # ----------------------------
-LIBRARIES       =
+LIBRARIES       = InstrumentImplementation
 LIBRARIES_L     =
 
 #
 # <brief description of lllll library>
-lllll_OBJECTS   =
+InstrumentImplementation_OBJECTS   = InstrumentImplementation
+InstrumentImplementation_LDFLAGS   =
+InstrumentImplementation_LIBS      = InstrumentStubs acscomponent logging TypesStubs SORTErr
 
 #
 # Scripts (public and local)
@@ -118,9 +117,9 @@ USER_IDL =
 #
 # Jarfiles and their directories
 #
-JARFILES := sortDatabase
-sortDatabase_DIRS := sort
-sortDatabase_EXTRAS := sort/database/database.hbm.xml
+JARFILES= 
+jjj_DIRS=
+jjj_EXTRAS=
 # For expressing dependencies between jarfiles (parallel builds)
 jjj_JLIBS= 
 #

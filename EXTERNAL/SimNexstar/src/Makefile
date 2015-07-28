@@ -1,13 +1,13 @@
 #*******************************************************************************
 # PPPPPPPP
 #
-# "@(#) $Id$"
+# "@(#) $Id: Makefile,v 1.3 2010-11-17 20:42:26 its Exp $"
 #
 # Makefile of ........
 #
 # who       when      what
 # --------  --------  ----------------------------------------------
-# javarias  03/09/13  created
+# wg2  09/07/07  created
 #
 
 #*******************************************************************************
@@ -23,8 +23,31 @@
 
 #
 # additional include and library search paths
-#USER_INC = 
-#USER_LIB = 
+USER_INC = 
+USER_LIB = -lACE \
+	-lTAO \
+	-lTAO_DsLogAdmin \
+	-lTAO_CosNaming \
+	-lTAO_IORTable \
+	-lTAO_PortableServer \
+	-lTAO_Svc_Utils \
+	-lTAO_CosTrading \
+	-lTAO_CosNotification \
+	-lTAO_DynamicAny \
+	-lTAO_IFR_Client \
+	-lTAO_CosProperty \
+	-lacsutil \
+	-lcdb \
+	-llogging \
+	-lacscomponent \
+	-lbaci \
+	-lmaci \
+	-lacsErrTypeComponent \
+	-lmaciClient \
+	-lacserr \
+	-lm \
+	-lloki \
+	-lacstime
 
 #
 # MODULE CODE DESCRIPTION:
@@ -35,7 +58,7 @@
 #
 # C programs (public and local)
 # -----------------------------
-EXECUTABLES     =
+EXECUTABLES     = 
 EXECUTABLES_L   = 
 
 #
@@ -46,22 +69,23 @@ xxxxx_LIBS      =
 
 #
 # special compilation flags for single c sources
-#yyyyy_CFLAGS   = 
+#MOUNT2_CFLAGS  =
 
 #
 # Includes (.h) files (public only)
 # ---------------------------------
-INCLUDES        = 
+INCLUDES        = Mount2RefAltDevIO.h  Mount2RefAzDevIO.h
 
 #
 # Libraries (public and local)
 # ----------------------------
-LIBRARIES       =
+LIBRARIES       = nexstarDevIO
 LIBRARIES_L     =
 
 #
-# <brief description of lllll library>
-lllll_OBJECTS   =
+# <brief description of MOUNT2 library>
+nexstarDevIO_OBJECTS   = SerialRS232 Mount2RefAzDevIO Mount2RefAltDevIO
+nexstarDevIO_LIBS   = 
 
 #
 # Scripts (public and local)
@@ -112,17 +136,15 @@ CDB_SCHEMAS =
 # 
 # IDL Files and flags
 # 
-IDL_FILES =
-TAO_IDLFLAGS =
+IDL_FILES = 
+IDL_TAO_FLAGS =
 USER_IDL =
 #
 # Jarfiles and their directories
 #
-JARFILES := sortDatabase
-sortDatabase_DIRS := sort
-sortDatabase_EXTRAS := sort/database/database.hbm.xml
-# For expressing dependencies between jarfiles (parallel builds)
-jjj_JLIBS= 
+JARFILES= 
+jjj_DIRS=
+jjj_EXTRAS= 
 #
 # java sources in Jarfile on/off
 DEBUG= 

@@ -1,13 +1,13 @@
 #*******************************************************************************
 # PPPPPPPP
 #
-# "@(#) $Id$"
+# "@(#) $Id: Makefile,v 1.2 2010-11-16 12:46:54 its Exp $"
 #
 # Makefile of ........
 #
 # who       when      what
 # --------  --------  ----------------------------------------------
-# javarias  03/09/13  created
+# maray  10/12/07  created
 #
 
 #*******************************************************************************
@@ -24,7 +24,27 @@
 #
 # additional include and library search paths
 #USER_INC = 
-#USER_LIB = 
+USER_LIB = 	-lACE \
+		-lTAO \
+		-lTAO_DsLogAdmin \
+		-lTAO_CosNaming \
+		-lTAO_IORTable \
+		-lTAO_PortableServer \
+		-lTAO_Svc_Utils \
+		-lTAO_CosTrading \
+                -lTAO_CosNotification \
+		-lTAO_DynamicAny \
+		-lTAO_IFR_Client \
+                -lTAO_CosProperty \
+		-lacsutil \
+		-lcdb \
+		-llogging \
+	        -lacscomponent \
+		-lbaci \
+		-lmaci \
+		-lmaciClient \
+		-lacserr \
+		-lm \
 
 #
 # MODULE CODE DESCRIPTION:
@@ -51,16 +71,18 @@ xxxxx_LIBS      =
 #
 # Includes (.h) files (public only)
 # ---------------------------------
-INCLUDES        = 
+INCLUDES        = lpiFrameDevIO.h lpiPropsDevIO.h
 
 #
 # Libraries (public and local)
 # ----------------------------
-LIBRARIES       =
+LIBRARIES       = lpiDevIO
 LIBRARIES_L     =
 
 #
 # <brief description of lllll library>
+lpiDevIO_OBJECTS = lpiFrameDevIO lpiPropsDevIO
+lpiDevIO_LIBS	= 
 lllll_OBJECTS   =
 
 #
@@ -113,16 +135,14 @@ CDB_SCHEMAS =
 # IDL Files and flags
 # 
 IDL_FILES =
-TAO_IDLFLAGS =
+IDL_TAO_FLAGS =
 USER_IDL =
 #
 # Jarfiles and their directories
 #
-JARFILES := sortDatabase
-sortDatabase_DIRS := sort
-sortDatabase_EXTRAS := sort/database/database.hbm.xml
-# For expressing dependencies between jarfiles (parallel builds)
-jjj_JLIBS= 
+JARFILES= 
+jjj_DIRS=
+jjj_EXTRAS= 
 #
 # java sources in Jarfile on/off
 DEBUG= 

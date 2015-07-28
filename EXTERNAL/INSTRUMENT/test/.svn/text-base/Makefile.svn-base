@@ -7,7 +7,7 @@
 #
 # who       when      what
 # --------  --------  ----------------------------------------------
-# javarias  03/09/13  created
+# instrument  17/07/12  created
 #
 
 #*******************************************************************************
@@ -36,13 +36,17 @@
 # C programs (public and local)
 # -----------------------------
 EXECUTABLES     =
-EXECUTABLES_L   = 
+EXECUTABLES_L   = TestInstrument #testN
 
 #
 # <brief description of xxxxx program>
-xxxxx_OBJECTS   =	
-xxxxx_LDFLAGS   =
-xxxxx_LIBS      =
+TestInstrument_OBJECTS   =	cppUnitTest
+TestInstrument_LDFLAGS   =  
+TestInstrument_LIBS      =  InstrumentStubs maciClient cppunit TypesStubs SORTErrStubs
+
+testN_OBJECTS   =	cppUnitTest_N
+testN_LDFLAGS   =  
+testN_LIBS      =  InstrumentStubs maciClient cppunit TypesStubs SORTErrStubs
 
 #
 # special compilation flags for single c sources
@@ -112,15 +116,15 @@ CDB_SCHEMAS =
 # 
 # IDL Files and flags
 # 
-IDL_FILES =
+IDL_FILES = 
 TAO_IDLFLAGS =
 USER_IDL =
 #
 # Jarfiles and their directories
 #
-JARFILES := sortDatabase
-sortDatabase_DIRS := sort
-sortDatabase_EXTRAS := sort/database/database.hbm.xml
+JARFILES= 
+jjj_DIRS=
+jjj_EXTRAS=
 # For expressing dependencies between jarfiles (parallel builds)
 jjj_JLIBS= 
 #
@@ -191,6 +195,7 @@ endif
 # TARGETS
 # -------
 all:	do_all
+	mkdir -p tmp
 	@echo " . . . 'all' done" 
 
 clean : clean_all 
