@@ -118,9 +118,9 @@ USER_IDL =
 #
 # Jarfiles and their directories
 #
-JARFILES := sortDatabase
-sortDatabase_DIRS := sort
-sortDatabase_EXTRAS := sort/database/database.hbm.xml
+JARFILES := acswsDatabase
+sortDatabase_DIRS := acsws
+sortDatabase_EXTRAS := acsws/database/database.hbm.xml
 # For expressing dependencies between jarfiles (parallel builds)
 jjj_JLIBS= 
 #

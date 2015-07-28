@@ -19,7 +19,7 @@ public class HibernateDaoImpl {
 	
 	public static Configuration getDefaultConfiguration() {
 		Configuration config = new Configuration();
-		config.setProperty("hibernate.connection.url", "jdbc:hsqldb:file:hsqldb/sort;shutdown=true");
+		config.setProperty("hibernate.connection.url", "jdbc:hsqldb:file:hsqldb/acsws;shutdown=true");
 		config.setProperty("hibernate.connection.username", "sa");
 		config.setProperty("hibernate.connection.password", "");
 		config.setProperty("hibernate.connection.driver_class", "org.hsqldb.jdbcDriver");
