@@ -7,7 +7,7 @@
 #
 # who       when      what
 # --------  --------  ----------------------------------------------
-# javarias  03/09/13  created
+# almamgr  09/09/13  created
 #
 
 #*******************************************************************************
@@ -51,7 +51,7 @@ xxxxx_LIBS      =
 #
 # Includes (.h) files (public only)
 # ---------------------------------
-INCLUDES        = 
+INCLUDES        =
 
 #
 # Libraries (public and local)
@@ -118,9 +118,10 @@ USER_IDL =
 #
 # Jarfiles and their directories
 #
-JARFILES := databaseImpl
-databaseImpl_DIRS := acsws
-databaseImpl_EXTRAS := acsws/database/database.hbm.xml
+JARFILES := schedulerImpl
+schedulerImpl_DIRS = acsws/scheduler 
+jjj_DIRS=
+jjj_EXTRAS=
 # For expressing dependencies between jarfiles (parallel builds)
 jjj_JLIBS= 
 #
